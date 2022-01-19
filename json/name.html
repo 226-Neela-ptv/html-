@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<body>
+<form name ="person">
+ <input name = "person"
+value = "neela"></input>
+ <input name = "surname"
+value = "ptv"></input>
+    </form>
+    <script>
+        let formData = new FormData
+        (document.forms.person);
+        formData.append("middle","Lee");
+
+        let xhr = new XMLHttpRequest();
+        xhr.open("POST" ,"/article/ xmlhttprequest/pst/user");
+        xhr.send(formData);
+        xhr.onload = () => alert(xhr.response);
+    </script>
+</body>
